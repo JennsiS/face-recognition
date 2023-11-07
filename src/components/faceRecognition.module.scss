@@ -53,9 +53,7 @@
         transform: translateY(5px);
     }
 
-    input {
-        display: none;
-    }
+ 
 }
 
 .buttonContainer {
@@ -244,14 +242,6 @@
         max-width: 100%;
         width: 100%;
 
-        h4 {
-            height: 50px;
-            font-size: $font-34;
-        }
-
-        > div {
-            height: 450px;
-        }
     }
 
     .fileUpload {

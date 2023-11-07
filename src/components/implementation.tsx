@@ -172,17 +172,15 @@ export default function FaceRecognition() {
 
     return (
         <>
-            {/* <Loader loading={isLoading} text={loaderMsg} /> */}
             <div className={`container ${styles.container}`}>
                 <div
                     className={`${styles.imageSection} ${styles.multiImageSection}`}>
                     <div className={styles.twoSectionPreview}>
                         <div className={styles.dataSetSection}>
-                            <h4>Create a data set for recognition</h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <h4 className='text-black text-lg'>Create a data set for recognition</h4>
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 shadow-lg h-450px">
                                 {dataSetImages?.map((image, index) => {
                                     return (
-             
                                         <div key={`data-set-${index}`}>
                                              <Image className='h-auto max-w-full rounded-lg'
                                                 ref={(imageRef) =>
@@ -216,8 +214,8 @@ export default function FaceRecognition() {
                             />
                         </div>
                         <div className={styles.queryImageSection}>
-                            <h4>Query Image</h4>
-                            <div>
+                            <h4 className='text-black text-lg'>Query Image</h4>
+                            <div className='grid grid-cols-2 md:grid-cols-3 gap-4 shadow-lg h-450px'>
                                 {queryImage && (
                                     <>
                                         <Image
@@ -238,7 +236,8 @@ export default function FaceRecognition() {
                             </div>
                             <label
                                 htmlFor='queryImage'
-                                className={styles.fileUpload}>
+                                className={styles.fileUpload}
+                            >
                                 <span>
                                     <i className='bi bi-upload'></i>
                                 </span>
